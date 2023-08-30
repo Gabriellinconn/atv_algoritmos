@@ -1,0 +1,23 @@
+6) divisivel por 2 e por 3: 
+
+#include <stdio.h>
+#include <locale>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+	int num;
+	
+	printf("Digite um número: ");
+	scanf("%d", &num);
+	
+	if(num%2==0 && num%3==0){
+		printf ("O número %d é divisivel por 2 e por 3!", num);
+	}
+	else  {
+	 printf("O número %d não é divisivel por 2 e por 3!", num); 
+	}
+	return 0;
+}
+
