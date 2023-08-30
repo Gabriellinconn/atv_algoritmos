@@ -21,3 +21,135 @@ main(){
 	return 0;
 }
 
+--------------------------------------------------------------------------------------
+
+7) divisivel por 2 e por 7: 
+
+#include <stdio.h>
+#include <locale>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+	int num;
+		
+		printf ("Digite um número: ");
+		scanf("%d", &num);
+		
+		if (num%2==0){
+		printf("O número %d é divisivel por 2", num);
+	}
+		else {
+			printf("O número %d não é divisivel por 2", num);
+		}
+	
+		if (num%7==0){
+		printf(" e o número %d é divisivel por 7", num);
+	}
+	
+		else {
+			printf(" e o número %d não é divisivel por 7", num);
+		}
+	
+	return 0;
+}
+
+------------------------------------------------------------------------------------
+
+8) valor absoluto ou impar/par:
+
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+	int num;
+		
+		printf ("Digite um número: ");
+		scanf("%d", &num);
+		
+			if (num>=0 && num%2==0){
+				printf("O número %d é par", num);
+			}
+			else if (num>=0 && num%2!=0){
+				printf("O número %d é impar", num);
+			}
+			else {
+				printf("O valor absoluto do número %d é %d", num, num*-1);
+			}
+		
+			
+			
+	
+	return 0;
+}
+
+----------------------------------------------------------------------------------------
+
+9) Maior de idade ou não:
+
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+	int idade;
+		
+		printf ("Insira sua idade: ");
+		scanf("%d", &idade);
+		
+		if (idade<18){
+			printf("Você é menor de idade, não pode entrar");
+		}
+		else if (idade>=18 && idade<65){
+			printf("Você já é maior de idade, porém dê preferência aos idosos");
+		}
+		else {
+			printf("Você pode entrar na fila preferêncial, pois já é da terceira idade");
+			
+		}
+					
+	
+	return 0;
+}
+
+-------------------------------------------------------------------------------------
+
+10) cópias:
+
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+	int copias;
+	float custo;
+	
+		printf("Quantas cópias foram impressas?: ");
+		scanf("%d", &copias);
+		
+		
+		
+		if (copias<=100){
+		custo=copias*0.25;
+		}
+		
+		else {
+		custo = 100*0.25 //ou 25 que é o preço das 100 primeiras cópias//
+		 + (copias-100)*0.20;
+		}
+		
+		printf("o Valor a ser pago pelas %d cópias, será de R$%.2f", copias, custo);
+	
+	return 0;
+}
+
+-------------------------------------------------------------------------------------
+
