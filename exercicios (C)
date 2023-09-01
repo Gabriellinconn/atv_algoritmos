@@ -153,3 +153,195 @@ main(){
 
 -------------------------------------------------------------------------------------
 
+11) calculadora
+
+#include <stdio.h>
+#include <locale.h>
+
+main (){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	char operacao;
+	float num, num_2,total;
+	
+	printf(" insira o primero número: ");
+	scanf("%f",&num);
+	
+	printf(" insira o segundo número: ");
+	scanf("%f",&num_2);
+	
+		printf(" insira a operação número: ");
+	scanf(" %c", &operacao);
+	
+	switch (operacao){
+		case '*':
+	
+			total=num*num_2;
+			printf("o resultado de %.2f vezes %.2f será %.2f", num, num_2, total);
+			break;
+		
+		
+		case '/': 
+			total=num/num_2;
+			printf("o resultado de %.2f divido por %.2f será %.2f", num, num_2, total);
+			break;
+		
+		
+		case '+':
+			total=num+num_2;
+			printf("o resultado de %.2f mais %.2f será %.2f", num, num_2, total);
+			break;
+		
+		
+		case '-':
+			total=num-num_2;
+			printf("o resultado de %.2f menos %.2f será %.2f", num, num_2, total);
+			break;
+	}
+	
+	return 0;
+}
+
+-------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <locale.h>
+
+main (){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int num;
+	
+	printf("Digite um Número de 0 a 9: ");
+	scanf("%d", &num);
+	
+	switch (num){
+		case '0':
+			printf("Zero");
+			break;
+			case 1:
+			printf("Um");
+			break;
+			case 2:
+			printf("Dois");
+			break;
+			case 3:
+			printf("Três");
+			break;
+			case 4:
+			printf("Quatro");
+			break;
+			case 5:
+			printf("Cinco");
+			break;
+			case 6:
+			printf("Seis");
+			break;
+			case 7:
+			printf("Sete");
+			break;
+			case 8:
+			printf("Oito");
+			break;
+			case 9: 
+			printf("Nove");
+			break;
+		
+	}
+	
+	
+	
+	
+
+	
+	return 0;
+}
+
+------------------------------------------------------------------------------
+
+#include <stdio.h>
+#include <locale.h>
+
+main (){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int num1, num2, num3, menor;
+	
+	printf("insira o PRIMEIRO número: ");
+	scanf("%d", &num1);	
+	
+	menor= num1;
+
+	printf("insira o SEGUNDO número: ");
+	scanf("%d", &num2);	
+	
+		if (menor>num2){
+		menor= num2;
+	}
+
+	printf("insira o TERCEIRO número: ");
+	scanf("%d", &num3);	
+	
+		if (menor>num3){
+		menor= num3;
+}
+	printf("O menor número dos quais você insiriu é %d", menor);
+	
+
+	return 0;
+}
+
+------------------------------------------------------------------------------
+
+14) gasolina
+
+#include <stdio.h>
+#include <locale.h>
+
+main (){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	float l_gasolina,l_alcool, preco_g, preco_a;
+	
+	
+	printf("Digite quantos litros foram abastecidos de Gasolina?");
+	scanf("%f", &l_gasolina);
+	
+		printf("Digite quantos litros foram abastecidos de Álcool?");
+	scanf("%f", &l_alcool);
+	
+	preco_g=l_gasolina*4.96;
+	
+	if (l_gasolina<20){
+		preco_g=preco_g-0.035;
+	}
+	
+	else if (l_gasolina>20){
+		preco_g=preco_g-0.06;
+	}
+	
+	preco_a=l_alcool*4.45;
+	
+		if (l_alcool<20){
+		preco_a=preco_a-0.03;
+	}
+	
+	else if (l_alcool>20){
+		preco_a=preco_a-0.5;
+	}
+		printf("De alcool ficou %d e de gasolina ficou %d", preco_a, preco_g);
+	
+
+		
+	
+	
+		
+	
+
+	return 0;
+}
+
