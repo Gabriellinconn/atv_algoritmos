@@ -301,47 +301,79 @@ main (){
 #include <stdio.h>
 #include <locale.h>
 
+int main() {
+    setlocale(LC_ALL, "portuguese");
+
+    float l_gasolina, l_alcool, preco_g, preco_a;
+
+    printf("Digite quantos litros foram abastecidos de Gasolina? ");
+    scanf("%f", &l_gasolina);
+
+    printf("Digite quantos litros foram abastecidos de Álcool? ");
+    scanf("%f", &l_alcool);
+
+    preco_g = l_gasolina * 4.96;
+
+    if (l_gasolina < 20) {
+        preco_g = preco_g - (preco_g * 0.035); // Discount as a percentage
+    } else if (l_gasolina > 20) {
+        preco_g = preco_g - (preco_g * 0.06); // Discount as a percentage
+    }
+
+    preco_a = l_alcool * 4.45;
+
+    if (l_alcool < 20) {
+        preco_a = preco_a - (preco_a * 0.03); // Discount as a percentage
+    } else if (l_alcool > 20) {
+        preco_a = preco_a - (preco_a * 0.05); // Discount as a percentage
+    }
+
+    printf("De alcool ficou %.2f e de gasolina ficou %.2f", preco_a, preco_g);
+
+    return 0;
+}
+
+15) kg maça e morango
+
+#include <stdio.h>
+#include <locale.h>
+
 main (){
 	
 	setlocale(LC_ALL, "portuguese");
 	
-	float l_gasolina,l_alcool, preco_g, preco_a;
+	float kg_maca, kg_morango, preco;
 	
+		printf("Digite quantos Kg de maça foram comprados: ");
+		scanf("%f", &kg_maca);
 	
-	printf("Digite quantos litros foram abastecidos de Gasolina?");
-	scanf("%f", &l_gasolina);
+		printf("Digite quantos Kg de Morango foram comprados: ");
+		scanf("%f", &kg_morango);
+		
+		if (kg_maca<5){
+			preco= preco+(kg_maca*3.8);
+		}
+		
+		else if (kg_maca>=5){
+			preco = preco + (kg_maca*3.5);
+		}
+		
+		if (kg_morango<5){
+			preco= preco+(kg_maca*6.5);
+		}
+		
+		else if (kg_maca>=5){
+			preco = preco + (kg_maca*6.2);
+		}
+		
+		printf("Com %.0f kg de maça e %.0f kg de morango, no total sua compra será de R$%.2f", kg_maca, kg_morango, preco);
+		
+		
 	
-		printf("Digite quantos litros foram abastecidos de Álcool?");
-	scanf("%f", &l_alcool);
-	
-	preco_g=l_gasolina*4.96;
-	
-	if (l_gasolina<20){
-		preco_g=preco_g-0.035;
-	}
-	
-	else if (l_gasolina>20){
-		preco_g=preco_g-0.06;
-	}
-	
-	preco_a=l_alcool*4.45;
-	
-		if (l_alcool<20){
-		preco_a=preco_a-0.03;
-	}
-	
-	else if (l_alcool>20){
-		preco_a=preco_a-0.5;
-	}
-		printf("De alcool ficou %d e de gasolina ficou %d", preco_a, preco_g);
 	
 
-		
-	
-	
-		
-	
 
 	return 0;
 }
+
 
