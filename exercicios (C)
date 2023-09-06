@@ -376,4 +376,67 @@ main (){
 	return 0;
 }
 
+--------------------------------------------------------------------------------------
 
+ATIVIDADE EXTRAS
+
+6) categoria de reajuste
+
+#include <stdio.h>
+#include <locale>
+
+main(){
+
+setlocale(LC_ALL, "portuguese");
+
+float valor ;
+char categoria;
+
+printf("Insira o Valor das compras: ");
+scanf("%f", &valor);
+
+printf("Você pode selecionar a categoria: A, B, C, D, E");
+printf("Insira a categoria do seu item: \n");
+scanf(" %c", &categoria);
+
+
+        switch (categoria){
+		
+
+        case 'A': 
+        case 'a':
+            valor= valor+(valor*0.2);
+        break ;
+
+        case 'B' :
+        case 'b':
+            valor= valor+(valor*0.15);
+        break;
+
+        case 'C' :
+        case 'c':
+            valor= valor+(valor*0.11);
+        break;
+
+        case 'D' :
+        case 'd':
+    		valor= valor+(valor*0.08);       
+		 break;
+
+        case 'E' :
+        case 'e':
+            valor= valor+(valor*0.05);
+        break;
+
+	default:
+		printf("categoria inválida");
+		break;
+	}
+        printf("O valor total do seu produto com o reajuste será R$%.2f", valor);
+
+    
+    return 0;
+
+}
+
+----------------------------------------------------------------------------
