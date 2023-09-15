@@ -440,3 +440,93 @@ scanf(" %c", &categoria);
 }
 
 ----------------------------------------------------------------------------
+2) fogo!
+for - while atividades
+
+#include <stdio.h>
+#include <locale>
+#include <windows.h>
+
+int main(){
+	
+	int i;
+	
+	for (i=10; i>=1; i--){
+		printf("%d\n", i);
+		Sleep (1000);
+	}
+	printf("fogo!!");
+	return 0;
+	
+}
+-------------------------------------------------------------------------------
+3) 1 a 100 de 5
+#include <stdio.h>
+#include <locale>
+#include <windows.h>
+
+int main(){
+	
+	int i, soma;
+	
+
+	for(i=5;i<=100;i+=5){
+		printf("%d \n", i);
+	}
+	
+	return 0;
+	
+}
+--------------------------------------------------------------------------
+
+4) soma de 1 x100
+
+#include <stdio.h>
+#include <locale>
+#include <windows.h>
+
+int main(){
+	
+	int i, soma;
+	
+	soma=0;
+	
+	for(i=1;i<=100;i++){
+		soma+=i;
+	}
+	
+	printf("Soma %d", soma);
+	
+	return 0;
+	
+}
+
+5) prototipo
+
+#include <stdio.h>
+#include <locale>
+#include <windows.h>
+
+int main(){
+	
+	int i, num;
+	
+	printf("insira um valor: ");
+	scanf("%d", &num);
+	
+	
+	
+	for(i=1;i<=num;i+=2){
+		
+		
+		printf("%d \n", i);
+		
+		if(i%2==0){
+			
+		}
+	}
+		printf("%d números expressos", num/2);
+		
+	
+	return 0;
+----------------------
