@@ -500,33 +500,158 @@ int main(){
 	return 0;
 	
 }
+----------------------------------------------------------------
 
 5) prototipo
 
 #include <stdio.h>
-#include <locale>
-#include <windows.h>
+#include <locale.h>
 
-int main(){
+main(){
 	
-	int i, num;
+	setlocale (LC_ALL, "portuguese");
+	
+int i, num;
 	
 	printf("insira um valor: ");
 	scanf("%d", &num);
 	
+
+
 	
-	
-	for(i=1;i<=num;i+=2){
+	for(i=2;i<=num;i+=2){
 		
 		
 		printf("%d \n", i);
 		
-		if(i%2==0){
-			
-		}
 	}
 		printf("%d números expressos", num/2);
 		
 	
 	return 0;
-----------------------
+}
+-----------------------------------------------------------
+
+12)
+int main(){
+
+	int i;
+	float numerador, denominador, soma;
+
+	numerador = 1;
+	denominador = 100;
+	soma=0
+
+	for (i = 1; i <=100; i++){
+		soma = soma+numerador/denominador;
+		numerador++
+		denominador--
+}
+printf("A soma é %.2f", soma);
+
+----------------------------------------------------------------
+
+6)
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+int num, soma;
+	
+	soma=0;
+	
+	do {
+		printf("Informe um número: ");
+		scanf("%d", &num);
+		
+		soma= soma+num;
+	}while(num!=0);
+	
+	printf("o resultado é: %d", soma);
+		
+	
+	return 0;
+}
+
+--------------------------------------------------------------
+
+7)
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+int tabuada, i ;
+
+	printf("Digite de q tabuada você quer saber: ");
+	scanf("%d", &tabuada);
+	
+		for(i=1;i<=10;i++){
+			printf("\n %d x %d = %d",tabuada, i, tabuada*i);
+		
+			
+		}
+			
+return 0;
+}
+
+----------------------------------------------------------------------
+
+8)
+
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+int tabuada, i, inicio, termino ;
+
+	printf("Digite de q tabuada você quer saber: ");
+	scanf("%d", &tabuada);
+	
+	printf("Digite em que número você quer começar: ");
+	scanf("%d", &inicio);
+	
+	printf("Digite em que número você quer terminar: ");
+	scanf("%d", &termino);
+
+	
+		for(i=inicio;i<=termino;i++){
+			printf("\n %d x %d = %d",tabuada, i, tabuada*i);
+		
+			
+		}
+return 0;
+		
+9)
+
+#include <stdio.h>
+#include <locale.h>
+
+main(){
+	
+	setlocale (LC_ALL, "portuguese");
+	
+float i;
+
+
+
+for(i=0; i<=100; i++){
+	printf("\n C°: %.0f e F°: %.1f",i,i*1.8 + 32);
+	
+}
+return 0;
+}
+
+
+-----------------------------------------------------------------
+
+
+
