@@ -630,7 +630,7 @@ int tabuada, i, inicio, termino ;
 		}
 return 0;
 		
-9)
+9) temperaturas
 
 #include <stdio.h>
 #include <locale.h>
@@ -654,4 +654,53 @@ return 0;
 -----------------------------------------------------------------
 
 
+10)fatorial
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int i, num, fatorial;
+	
+	fatorial=1;
+	
+	printf("Insira número: ");
+	scanf("%d", &num);
+	
+	for(i=1; i<=num; i++){
+		fatorial=fatorial*i;
+		
+	
+	}
+	
+	printf("Resultado Fatorial: %d",fatorial);
+	
+return 0;	
+}
+
+11)
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+int i, num;
+
+num=1;
+
+for(i=1;i<=10;i++){
+		printf("%d ", num );
+	num *= 3;
+}
+
+
+	
+return 0;	
+}
 
