@@ -951,7 +951,8 @@ int main(){
 
 ---------------------------------------------------------
 
-19)
+19)menu de impar e par
+
 #include <stdio.h>
 #include <locale.h>
 
@@ -961,37 +962,39 @@ int main(){
 	
 	int par, impar, num, escolha;
 	
+	par = impar = 0;
+	
+	do{
 	printf("#Menu Principal#\n");
-	printf("[1] Digitar o número Par. \n");
-	printf("[2] Digitar o número ímpar. \n");
+	printf("[1] Digitar o número ímpar. \n");
+	printf("[2] Digitar o número Par. \n");
 	printf("[3] Finalizar Programa. \n");
 	scanf("%d", &escolha);
-
-
-	do{
+	
 	switch (escolha){
-		case 1:
+		case 2:
 			do{
-			printf("Digite um núemro par: ");
+			printf("Digite um número par: ");
 			scanf("%d", &num);
 			
-			}while (num%2==0);
+			}while (num%2!=0);
 				par++;
 				break;
 			
 				
-				case 2:
+				case 1:
 			do{
 			printf("Digite um núemro ímpar: ");
 			scanf("%d", &num);
-			}while(num%3==0);
+			}while(num%2==0);
 				impar++;
 			}
 	
-	}while (escolha!=3);
+	
+	} while (escolha != 3);
 
-	printf("Foram inseridos %d números pares na opção par/n", par);
-	printf("Foram inseridos %d números impares na opção ímpar/n",impar);
+	printf("Foram inseridos %d números pares na opção par \n", par);
+	printf("Foram inseridos %d números impares na opção ímpar \n",impar);
 	
 			
 	
@@ -1000,4 +1003,38 @@ int main(){
 	
 }
 
+---------------------------------------------------------------------------------
 
+20)Verificador de senha correta
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int tentativa, num_tent;
+	
+	num_tent=0;
+	
+	do{
+		printf("Informe sua Senha: ");
+		scanf("%d",&tentativa);
+		
+		if (tentativa!=2009){
+		printf("a senha está incorreta\n");
+	}
+	
+	num_tent++;
+	
+}while (tentativa!=2009);
+
+
+printf("Acesso Permitido\n");
+printf("Foram necessárias %d tentativas", num_tent);
+	
+	
+	return 0;
+	
+}
