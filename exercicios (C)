@@ -1038,3 +1038,64 @@ printf("Foram necessárias %d tentativas", num_tent);
 	return 0;
 	
 }
+
+-------------------------------------------
+
+Joguinho
+
+#include <stdio.h>
+#include <locale.h>
+#include <time.h>
+#include <stdlib.h>
+#include <windows.h>
+
+ int main(){
+ 	setlocale(LC_ALL, "portuguese");
+ 	
+ 	char nome[21], opcao;
+ 	int resposta, porta;
+ 	
+ 	printf("Informe seu nome: ");
+ 	scanf("%s", nome);
+ 	
+ 	printf("\n Olá %s, Quer Jogar (S/N)? : ", nome);
+ 	scanf(" %c", &opcao);
+ 	
+ 	if(opcao!= 's' || opcao != 'S'){
+ 		printf("\n Ok, Fica pra próxima...");
+ 		return 0;
+}
+
+
+	
+ 	srand(time(NULL));
+ 	resposta = 1 +rand() % 5;
+ 	
+ 	
+ 	
+ 	printf("- Você está em uma casa velha e escuta um barulho vindo das portas de trás...\n");
+ 	Sleep(300);
+ 	
+ 	printf("(BLAAASHH\n)");
+ 	Sleep(300);
+ 	
+ 	printf("- Provavelmente deve ser um Goblim. Vamos escolher uma Porta para inspecionar...");
+ 	Sleep(300);
+
+	printf("_______ _______ _______ _______ _______\n");
+	printf("|     | |     | |     | |     | |     |\n");
+	printf("|     | |     | |     | |     | |     |\n");
+	printf("|  1  | |  2  | |  3  | |  4  | |  5  |\n");
+	printf("|     | |     | |     | |     | |     |\n");
+	printf("|    °| |    °| |    °| |    °| |    °|\n");
+	printf("|     | |     | |     | |     | |     |\n");
+	printf("|     | |     | |     | |     | |     |\n");
+	printf("|_____| |_____| |_____| |_____| |_____|\n");
+	printf("\nEscolha uma porta: ");
+	
+	
+	
+	
+ 
+ 	return 0;
+ }
