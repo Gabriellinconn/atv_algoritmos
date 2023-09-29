@@ -1043,6 +1043,7 @@ printf("Foram necessárias %d tentativas", num_tent);
 
 Joguinho
 
+
 #include <stdio.h>
 #include <locale.h>
 #include <time.h>
@@ -1057,14 +1058,17 @@ Joguinho
  	
  	printf("Informe seu nome: ");
  	scanf("%s", nome);
- 	
- 	printf("\n Olá %s, Quer Jogar (S/N)? : ", nome);
- 	scanf(" %c", &opcao);
- 	
- 	if(opcao!= 's' || opcao != 'S'){
- 		printf("\n Ok, Fica pra próxima...");
- 		return 0;
-}
+    
+    printf("%s, você acha que pode encontrar o goblin escondido nos armários da cozinha (S/N)?: ", nome);
+    scanf(" %c", &opcao);
+    
+    if(toupper(opcao) != 'S'){
+        printf("Sem problemas. Fica pra próxima!");
+        return 0;
+    }
+    
+    srand(time(NULL));
+    resposta = 1 + rand() % 5;
 
 
 	
@@ -1073,14 +1077,15 @@ Joguinho
  	
  	
  	
- 	printf("- Você está em uma casa velha e escuta um barulho vindo das portas de trás...\n");
- 	Sleep(300);
+ 	printf("- Você está em uma casa velha... escuta um barulho vindo das portas de trás...\n");
+ 	Sleep(4000);
  	
- 	printf("(BLAAASHH\n)");
- 	Sleep(300);
+ 	printf("(BLAAASHH)\n");
+ 	Sleep(1000);
  	
- 	printf("- Provavelmente deve ser um Goblim. Vamos escolher uma Porta para inspecionar...");
- 	Sleep(300);
+ 	printf("- Provavelmente deve ser um Goblim. Vamos escolher uma Porta para inspecionar...\n");
+ 	Sleep(4000);
+do{
 
 	printf("_______ _______ _______ _______ _______\n");
 	printf("|     | |     | |     | |     | |     |\n");
@@ -1092,10 +1097,61 @@ Joguinho
 	printf("|     | |     | |     | |     | |     |\n");
 	printf("|_____| |_____| |_____| |_____| |_____|\n");
 	printf("\nEscolha uma porta: ");
+	scanf("%d", &porta);
 	
+	switch(porta){
+		case 1:
+			if(resposta==porta){
+				printf("Parabéns... Você encontrou o Goblim da Floresta. Ele estava com tanto medo que saiu correndo\n");
+			}
+			else{
+			printf("Hmmmmm estranho, jurava que o som estava vindo desta porta\n");			
+}
+		break;
+		case 2:
+			if(resposta==porta){
+				printf("Parabéns... Você encontrou o Goblim da Floresta. Ele estava com tanto medo que saiu correndo\n");
+			}
+			else{
+			printf("Caraca, parece que ele está próximo...\n");
+			
+}
+		break;
+
+		case 3:
+			if(resposta==porta){
+				printf("Parabéns... Você encontrou o Goblim da Floresta. Ele estava com tanto medo que saiu correndo\n");
+			}
+			else{
+			printf("Bem, normalmente a gente sempre escolhe a do meio, mas ele não está aqui\n");
+}
+			break;
+
+
+		case 4:
+			if(resposta==porta){
+				printf("Parabéns... Você encontrou o Goblim da Floresta. Ele estava com tanto medo que saiu correndo\n");
+			}
+			else{
+			printf("O que será que tem atrás da porta número 4?... poisé, nada...\n");
+}
+		break;
+		case 5:
+			if(resposta==porta){
+				printf("Parabéns... Você encontrou o Goblim da Floresta. Ele estava com tanto medo que saiu correndo\n");
+			}
+			else{
+			printf("É, eu sabia que ele não estava aqui...\n");
+}
+	break;
 	
-	
+	default:
+                printf("Escolha um número válido (1 a 5). Tente novamente!\n\n");
+                break;
+            }
+}while (resposta!=porta);
 	
  
  	return 0;
  }
+
