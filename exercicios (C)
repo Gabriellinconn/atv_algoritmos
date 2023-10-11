@@ -1262,3 +1262,80 @@ for(i=0;i<5; i++){
 	return 0;
 }
 ------------------------------------------------
+
+5)
+
+-------------------------------------------------
+
+6)soma da multiplicação de 2 vetores
+#include <stdio.h>
+#include <locale>
+
+int main(){
+	setlocale (LC_ALL, "portuguese");
+	
+	int i, vetorA[5]={0, 2, 4, 6, 8}, vetorB[5]={1, 3, 5, 7, 9}, soma;
+	soma=0;
+	for(i=0; i<5; i++){
+		soma+=vetorA[i]*vetorB[i];
+	}
+	printf("A soma dos vetores é: %d", soma);
+	
+	
+	return 0;
+}
+
+--------------------------------------------------
+
+7)indice de par e impar
+#include <stdio.h>
+#include <locale>
+
+int main(){
+	setlocale (LC_ALL, "portuguese");
+	
+	int i, impar, par, vetor[5]={2,3,4,5,6} ;
+	
+	par=impar=0;
+	
+	for(i=0; i<5; i++){
+		if(vetor[i]%2!=0){
+			printf("%d ímpar \n", vetor[i]);
+			impar++;
+		}
+		if(vetor[i]%2==0){
+			printf("%d par \n", vetor[i]);
+			par++;
+		}
+	}
+	printf(" %d números ímpares E %d núemros pares", impar, par);
+	
+	
+	
+	return 0;
+}
+-------------------------------------------
+8)encontrar se um número tem no registro e em que vetor ele está: 
+
+#include <stdio.h>
+#include <locale>
+
+int main(){
+	setlocale (LC_ALL, "portuguese");
+	
+	int i, vetor[5]={4,7,3,8,6}, num;
+	
+	printf("Informe um número para consulta se já existente: ");
+	scanf("%d", &num);
+	
+	for(i=0;i<5;i++){
+		if (num==vetor[i]){
+			printf("O número (%d) informado foi encontrado no vetor %d", num, i);
+		return 0;	
+		}
+		
+	}
+	printf("O número informado não foi encontrado nos registros... Tente novamente mais tarde.");
+	
+	return 0;
+}
