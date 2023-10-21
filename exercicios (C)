@@ -1343,6 +1343,62 @@ int main(){
 
 ----------------------------------------------------------------------------
 
+9)preco e quantidade de 10 produtos com faturamento
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+    setlocale(LC_ALL,"portuguese");
+    
+    int Q[10],  i, faturamento=0;
+    float P[10];
+    
+    for(i=0;i<10;i++){
+                       printf("Quantas quantidades do produto %d foram vendidas?: \n", i);
+                       scanf("%d", &Q[i]);
+                   }
+                       for (i=0;i<10;i++){
+                            printf("Qual o preço do produto %d? ", i);
+                            scanf("%f", &P[i]);
+                        }
+                            
+                            for (i=0;i<10;i++){
+                       faturamento+=Q[i]*P[i];
+                            }
+                            
+
+ printf("O Fatoramento mensal é de %d", faturamento);
+
+return 0;
+}
+
+}
+
+--------------------------------------------------------------------------
+10)
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+
+    setlocale(LC_ALL,"portuguese");
+    
+    int vetor[100], i;
+    
+    for (i=1; i<101; i++){
+    	vetor[i]= i*10;
+	}
+	
+ 	for (i=1; i<101; i++){
+ 	printf("%d", vetor[i]);
+ 	}
+
+return 0;
+}
+
+
 --------------------------------------------------------------------------
 *MATRIZES*
 1)Soma das matrizes
