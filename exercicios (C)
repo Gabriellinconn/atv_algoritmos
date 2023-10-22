@@ -1377,7 +1377,8 @@ return 0;
 }
 
 --------------------------------------------------------------------------
-10)
+10)10, 20... 1000
+
 #include <stdio.h>
 #include <locale.h>
 
@@ -1392,11 +1393,60 @@ int main(){
 	}
 	
  	for (i=1; i<101; i++){
- 	printf("%d", vetor[i]);
+ 	printf("%d ", vetor[i]);
  	}
 
 return 0;
 }
+
+--------------------------------------------------------------------------
+11)dados viciados
+
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+
+	setlocale(LC_ALL, "portuguese");
+
+	int vetor[6] = {0, 0, 0, 0, 0, 0}, num, i;
+	for(i = 1; i <= 15; i++) {
+		printf("Informe número %d: ", i);
+		scanf("%d", &num);
+		vetor[num - 1]++;
+	}
+	for(i = 0; i < 6; i++) {
+		printf("\nOcorrências face %d: %d", i + 1, vetor[i]);
+	}
+	return 0;
+}
+
+--------------------------------------------------------------------------
+12) mega sena
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+	
+	setlocale(LC_ALL, "portuguese");
+	
+	int G[6]={1,2,3,4,5,6}, A[10]={9,2,3,4,5,6,7,8,9,10}, i, j, acertos;
+	
+	acertos=0;
+	for(i=0;i<6;i++){
+		for(j=0;j<10;j++){
+			
+			if(G[i]==A[j]){
+				acertos++;
+			}
+		}
+	}
+	printf("acertos: %d", acertos);
+
+	return 0;
+}
+
+
 
 
 --------------------------------------------------------------------------
