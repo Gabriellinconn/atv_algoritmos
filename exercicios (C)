@@ -1874,3 +1874,52 @@ int main(){
 }
 
 2)
+
+-----------------------------------------------------------
+
+1)para arrumar
+
+#include <stdio.h>
+#include <locale>
+
+struct Aluno{
+	char Nome[31], Materia[31];
+	float nota1, nota2;
+};
+
+int main(){
+	setlocale(LC_ALL,"portuguese");
+	struct Aluno A[3];
+	int i;
+	float media;
+	
+	
+	
+	for(i=0;i<3;i++){
+		printf("Digite nome do aluno: \n");
+		scanf( " %30[^\n]", A[i].Nome);
+		
+		printf("Digite a Matéria: \n");
+		scanf( " %30[^\n]", A[i].Materia);
+		
+		printf("Digite A 1° nota da prova: \n");
+		scanf("%f", &A[i].nota1);
+		
+		printf("Digite A 2° nota da prova: \n");
+		scanf("%f", &A[i].nota2);
+		
+		media=(A[i].nota1 + A[i].nota2)/2;
+			
+	}
+	
+	for(i=0;i<3;i++){
+	if((A[i].nota1 + A[i].nota2)/2>=6){
+	
+	printf("\nAluno(a) %s Tirou %.2f na Matéria %s\n", A[i].Nome, A[i].nota1 + A[i].nota2)/2, A[i].Materia);
+}
+	}
+	
+	
+	return 0;
+}
+
