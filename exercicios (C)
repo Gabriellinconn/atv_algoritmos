@@ -1960,3 +1960,110 @@ int main(){
 	return 0;
 }
 
+---------------------------------------------------------------
+
+*FUNÇÕES*
+
+1 e 2 e 3 kkkk) repetir *
+
+#include <stdio.h>
+#include <locale.h>
+
+void linha (int quant){
+	for(int i=0;i<quant; i++){
+		printf("*");
+	}
+	printf("\n");
+}
+
+int main(){
+	
+setlocale(LC_ALL, "portuguese");
+
+linha(20);
+
+printf("Números de 1 a 5: \n");
+
+linha(20);
+
+for(int i=1;i<6; i++){
+	printf(" %d", i);
+	printf("\n");
+}
+
+linha(20);
+
+return 0;
+}
+
+4)Número absoluto
+
+#include <stdio.h>
+#include <locale.h>
+
+int abs (int num){
+	if(num<0){
+	
+		int s= num*-1;
+		
+		return s;
+	}
+
+}
+
+int main(){
+	
+setlocale(LC_ALL, "portuguese");
+
+int num;
+
+printf("Insira um número: ");
+scanf("%d", &num);
+
+printf("\n O número Absoluto é: %d ", abs(num));
+
+return 0;
+}
+
+5) soma de um número até o outro
+
+#include <stdio.h>
+#include <locale.h>
+
+int soma (int n1, int n2){
+	int s=0;
+	if(n1<n2){
+		for(int i=n1+1; i<n2;i++){
+			s += i;
+			
+			
+		}
+		
+	}
+	
+	if(n1>n2){
+		for(int i=n2+1; i<n1;i++){
+			s += i;
+		}
+		
+	}
+return s;
+}
+
+int main(){
+	
+setlocale(LC_ALL, "portuguese");
+
+int num1, num2;
+
+printf("Insira um número: ");
+scanf("%d", &num1);
+
+printf("Insira o segundo número: ");
+scanf("%d", &num2);
+
+printf("A soma dos números de %d até %d é: %d", num1, num2, soma(num1, num2));
+
+return 0;
+}
+
